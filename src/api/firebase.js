@@ -57,9 +57,9 @@ export async function addProduct(product,imgUrl){
 export async function getProducts(){
     return get(ref(database, 'shop'))
           .then(snapshot=>{
-           if(snapshot.exists()){
-            return Object.values(snapshot.val());
-           } 
+            if(snapshot.exists()){
+             return Object.values(snapshot.val());
+            }
      return [];
     })
 }
